@@ -65,6 +65,42 @@
     "doctrine/reflection": {
         "version": "v1.0.0"
     },
+    "enqueue/amqp-tools": {
+        "version": "0.8.35"
+    },
+    "enqueue/async-event-dispatcher": {
+        "version": "0.7",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "0.7",
+            "ref": "9e937ccb79e08b978f91fb816d4e6d645813113a"
+        }
+    },
+    "enqueue/enqueue": {
+        "version": "0.8.35"
+    },
+    "enqueue/enqueue-bundle": {
+        "version": "0.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "0.4",
+            "ref": "daaea0035c3abd612f71f0288d5c20197c3c34ad"
+        }
+    },
+    "enqueue/messenger-adapter": {
+        "version": "0.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "0.1",
+            "ref": "9a7119f609b576a30dbf03e4fe44212388e96ea1"
+        }
+    },
+    "enqueue/null": {
+        "version": "0.8.24"
+    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
@@ -113,6 +149,15 @@
     "psr/simple-cache": {
         "version": "1.0.1"
     },
+    "queue-interop/amqp-interop": {
+        "version": "0.7.5"
+    },
+    "queue-interop/queue-interop": {
+        "version": "0.6.2"
+    },
+    "ramsey/uuid": {
+        "version": "3.8.0"
+    },
     "sebastian/diff": {
         "version": "3.0.1"
     },
@@ -124,6 +169,9 @@
             "version": "5.2",
             "ref": "fb7e19da7f013d0d422fa9bce16f5c510e27609b"
         }
+    },
+    "symfony/amqp-pack": {
+        "version": "v1.0.11"
     },
     "symfony/cache": {
         "version": "v4.1.4"

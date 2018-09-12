@@ -5,6 +5,7 @@ namespace App\Controller;
 
 use App\Message\Command\SendNotification;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Messenger\MessageBusInterface;
 
@@ -19,9 +20,11 @@ class DefaultController extends AbstractController
      * @param MessageBusInterface $bus
      * @return Response
      */
-    public function index(MessageBusInterface $bus)
+    public function index(MessageBusInterface $bus, Request $request)
     {
-        $bus->dispatch(new SendNotification('A string to be sent...'));
+        $message = $request->query->get('message', 'Something.');
+
+        $bus->dispatch(new SendNotification($message));
 
         return $this->render('default/index.html.twig');
     }

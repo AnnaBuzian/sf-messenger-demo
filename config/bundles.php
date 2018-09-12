@@ -11,4 +11,6 @@ return [
     Symfony\Bundle\SecurityBundle\SecurityBundle::class => ['all' => true],
     Symfony\Bundle\TwigBundle\TwigBundle::class => ['all' => true],
     MsgPhp\UserBundle\MsgPhpUserBundle::class => ['all' => true],
+    Enqueue\Bundle\EnqueueBundle::class => ['all' => true],
+    Enqueue\MessengerAdapter\Bundle\EnqueueAdapterBundle::class => ['all' => true],
 ];
