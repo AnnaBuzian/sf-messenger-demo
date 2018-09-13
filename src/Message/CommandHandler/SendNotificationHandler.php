@@ -3,6 +3,7 @@
 namespace App\Message\CommandHandler;
 
 
+use App\Entity\User\User;
 use App\Message\Command\SendNotification;
 
 /**
@@ -16,6 +17,13 @@ class SendNotificationHandler
      */
     public function __invoke(SendNotification $message)
     {
-        echo "Send notification to ...\n";
+        foreach ($message->getUsers() as $user) {
+            echo 'Send notification to '
+                . $user['credential']['username']
+                . '. Message: '
+                . $message->getMessage()
+                . "\n";
+
+        }
     }
 }
